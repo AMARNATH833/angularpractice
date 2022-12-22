@@ -1,0 +1,11 @@
+<h1 id="two-way">Example of Two way binding</h1>
+<div>
+  <app-binding [(size)]="fontSizepx"></app-binding>
+  <div [style.font-size.px]="fontSizepx">Resizeable Text </div>
+  <!-- <label>FontSize (px): <input [(ngModel)]="fontSizepx"/> </label> -->
+</div>
+<br><hr>
+<div id="two-way-2">
+  <h2>De-sugared Two way binding</h2>
+  <app-binding [size]="fontSizepx" (sizeChange)="fontSizepx=$event"></app-binding>
+</div>
