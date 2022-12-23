@@ -15,7 +15,9 @@ export class ProfileReactiveComponent{
 
   profileForm=new FormGroup({
     firstName:new FormControl('',Validators.required),
-    lastName:new FormControl('')
+    lastName:new FormControl(''),
+    password:new FormControl(''),
+    conformPassword:new FormControl('')
     
   })
   address=new FormGroup({ 

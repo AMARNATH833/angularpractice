@@ -9,16 +9,19 @@ import { BindingMainComponent } from './bindingMain/bindingMain.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileReactiveComponent } from './profileReactive/profileReactive.component';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
-  declarations: [						
+  declarations: [								
     AppComponent,
     routingComponents,
     LazyComponent,
       BindingComponent,
       BindingMainComponent,
       ReactiveformsComponent,
-      ProfileReactiveComponent
+      ProfileReactiveComponent,
+      LoginComponent
    ],
   imports: [
     BrowserModule,
