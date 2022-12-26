@@ -10,25 +10,33 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileReactiveComponent } from './profileReactive/profileReactive.component';
 import { LoginComponent } from './login/login.component';
+import { SupermarketComponent } from './supermarket/supermarket.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FruitsComponent } from "./supermarket/fruits/fruits.component";
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
-  declarations: [								
-    AppComponent,
-    routingComponents,
-    LazyComponent,
-      BindingComponent,
-      BindingMainComponent,
-      ReactiveformsComponent,
-      ProfileReactiveComponent,
-      LoginComponent
+    declarations: [		
+        AppComponent,
+        routingComponents,
+        LazyComponent,
+        BindingComponent,
+        BindingMainComponent,
+        ReactiveformsComponent,
+        ProfileReactiveComponent,
+        LoginComponent,
+        SupermarketComponent,
+        HttpClientModule
    ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    providers: [],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        NgbModule,
+    ]
 })
 export class AppModule { }

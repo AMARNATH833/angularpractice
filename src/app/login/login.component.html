@@ -7,7 +7,16 @@
       <label>Name:</label>
       <input type="text" formControlName="fullName">
       <div id="message" *ngIf="!form.get('fullName')?.valid && form.get('fullName')?.touched">
-        Enter atleast 5characters for name:
+        Enter atleast only 8characters for name:
+      </div>
+    </div>
+
+    <!-- AGE -->
+    <div>
+      <label>AGE:</label>
+      <input type="number" formControlName="age">
+      <div id="age" *ngIf="!form.get('age')?.valid && form.get('age')?.touched">
+        age is not valid one.
       </div>
     </div>
 
@@ -32,4 +41,5 @@
     <button type="submit" (click)="onSubmit()">SUBMIT</button>
   </form>
   {{form.value|json}}
+  
 </div>

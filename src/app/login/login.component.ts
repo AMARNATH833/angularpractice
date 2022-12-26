@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms';
+import {fullName,ageOf} from './validate/verify.validation'; 
 
 @Component({
   selector: 'app-login',
@@ -10,20 +11,15 @@ export class LoginComponent{
 
   constructor(private fb:FormBuilder) { }
 
+  // userName(/[A-z]/)
   form=this.fb.group({
-    fullName:[
-      null,
-      [
-        Validators.required,
-        Validators.pattern(/^[A-z0-9]*$/),
-        Validators.minLength(8)
-      ],
-    ],
+    fullName:['',fullName],
+    age:['',ageOf],
     email:[
       null,
       [
         Validators.required,
-        Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{3})+$/),
+        Validators.pattern(/^[a-z0-9]((\.|\+)?[a-z0-9]){5,}@g(oogle)?mail\.com$/),
       ],
     ],
     password:[
@@ -39,6 +35,7 @@ export class LoginComponent{
   onSubmit(){ 
     if(this.form.valid){
       console.log('Form Submitted successfully');
+      
     }
     else{
       console.log("Form not get submitted")
