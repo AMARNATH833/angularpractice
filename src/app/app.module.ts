@@ -14,6 +14,7 @@ import { SupermarketComponent } from './supermarket/supermarket.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FruitsComponent } from "./supermarket/fruits/fruits.component";
 import { HttpClientModule } from '@angular/common/http';
+import { SamplePipePipe } from './sample-pipe.pipe';
 
 
 
@@ -28,7 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
         ProfileReactiveComponent,
         LoginComponent,
         SupermarketComponent,
-        HttpClientModule
+        SamplePipePipe,
    ],
     providers: [],
     bootstrap: [AppComponent],

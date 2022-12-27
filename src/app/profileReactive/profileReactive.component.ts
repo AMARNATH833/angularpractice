@@ -14,7 +14,7 @@ export class ProfileReactiveComponent{
   // Validators.required,Validators.maxLength(2),Validators.minLength(2)
 
   profileForm=new FormGroup({
-    firstName:new FormControl('',Validators.required),
+    firstName:new FormControl(''),
     lastName:new FormControl(''),
     password:new FormControl(''),
     conformPassword:new FormControl('')
@@ -26,8 +26,13 @@ export class ProfileReactiveComponent{
     pincode:new FormControl('')
   })
 
+  // get password(){
+    
+  // }
+
   onSubmit(){
     console.warn(this.profileForm.value);
+    
   }
   onSubmitAdd(){
     console.warn(this.address.value);

@@ -8,6 +8,8 @@ import {fullName,ageOf} from './validate/verify.validation';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
+[x: string]: any;
+passwordInput: any;
 
   constructor(private fb:FormBuilder) { }
 
@@ -32,14 +34,18 @@ export class LoginComponent{
     ],
   });
 
+  
   onSubmit(){ 
     if(this.form.valid){
       console.log('Form Submitted successfully');
-      
+      console.log(this.form.get('password')?.value)
     }
     else{
       console.log("Form not get submitted")
     }
   }
+  // getchanged(){
+  //   console.log("Value is "+this.value);
+  // }
 
 }
